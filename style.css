@@ -406,6 +406,9 @@ header .logo img {
   background-color: #1565C0; /* Button hover color, adjust as needed */
 }
 /* Sector Section */
+.sectors a{
+    text-decoration: none;
+}
 .sectors {
     background-color: #f7f7f7;
     padding: 100px 0;
@@ -1246,3 +1249,71 @@ footer {
   .job-vacancies-section a:hover::after {
     transform: rotate(20deg);
   }
+
+  /* Custom Alert Styles */
+.alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50; /* Change to your theme color */
+    color: white;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none; /* Hidden by default */
+    max-width: 300px;
+}
+
+.alert-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.alert-message {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.alert-close {
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.alert.hidden {
+    display: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* WhatsApp Floating Icon Styles */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #25D366; /* WhatsApp green */
+    color: #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    text-decoration: none;
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-icon:hover {
+    background-color: #128C7E; /* Darker green for hover effect */
+}
+.blogs-section a{
+    text-decoration: none;
+}

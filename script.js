@@ -1,3 +1,26 @@
+document.addEventListener('DOMContentLoaded', function() {
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  // Smooth scroll function
+  function smoothScroll(event) {
+      event.preventDefault(); // Prevent default anchor click behavior
+
+      const targetId = this.getAttribute('href'); // Get the target section id
+      const targetElement = document.querySelector(targetId);
+
+      if (targetElement) {
+          window.scrollTo({
+              top: targetElement.offsetTop,
+              behavior: 'smooth'
+          });
+      }
+  }
+
+  // Add event listener to each nav link
+  navLinks.forEach(link => {
+      link.addEventListener('click', smoothScroll);
+  });
+});
 
 
 
@@ -298,28 +321,41 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contact-form');
-  
-    form.addEventListener('submit', (event) => {
-      event.preventDefault(); // Prevent the default form submission
-  
-      // Form data
-      const name = form.querySelector('#name').value;
-      const email = form.querySelector('#email').value;
-      const message = form.querySelector('#message').value;
-  
-      // Construct the message to send via WhatsApp
-      const whatsappMessage = encodeURIComponent(
-        `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
-      );
-  
-      // WhatsApp API URL with pre-filled message
-      const whatsappURL = `https://wa.me/1234567890?text=${whatsappMessage}`;
-  
-      // Open WhatsApp chat with the pre-filled message
-      window.open(whatsappURL, '_blank');
+    const alert = document.getElementById('custom-alert');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();  // Prevent default form submission
+        
+        const formData = new FormData(form);
+
+        fetch(form.action, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(result => {
+            showAlert('Thank you! Your message has been sent.');
+            form.reset();  // Reset the form
+            setTimeout(() => {
+                window.location.reload();  // Reload the page after a delay
+            }, 2000); // Adjust delay as needed
+        })
+        .catch(error => {
+            showAlert('Sorry, something went wrong. Please try again.');
+            console.error('Error:', error);
+        });
     });
-  });
-    
+
+    function showAlert(message) {
+        const alertMessage = alert.querySelector('.alert-message');
+        alertMessage.textContent = message;
+        alert.classList.remove('hidden');
+    }
+
+    function closeAlert() {
+        alert.classList.add('hidden');
+    }
+});
 
