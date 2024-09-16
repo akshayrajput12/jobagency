@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<!-- Header Section -->
+<header>
+    <div class="container">
+        <div class="logo">
+            <img src="/data/images/logo.png" alt="The-Krispa Logo">
+        </div>
+        <nav class="navbar">
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Sectors</a></li>
+                <li><a href="#">Vacancies</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Clients</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <a href="#" class="cta">Book</a>
+            <div class="menu-icon" id="menu-icon" onclick="toggleMenu()">
+                <div class="bar bar1"></div>
+                <div class="bar bar2"></div>
+                <div class="bar bar3"></div>
+            </div>
+        </nav>
+    </div>
+</header>
+<section class="hero parallax" style="background-image: url('/data/images/your-image.jpg');">
+    <video class="background-video" autoplay loop muted playsinline>
+        <source src="/data/video/recruiting-agency.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="hero-content">
+        <h1>Welcome to <span>The Krispa</span></h1>
+        <button class="primary-btn">Learn More</button>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+    <div class="container">
+      <div class="about-img">
+        <img src="/data/images/recruit.jpg" alt="About Krispa Recruitment & Staffing">
+      </div>
+      <div class="about-info">
+        <h2>About Krispa Recruitment & Staffing</h2>
+        <p>We are a family-owned and family-run local recruitment agency, who believe in doing things differently. We're committed to building long-term partnerships that boost our clients' business and contribute to the growth of the economy in our local area.</p>
+        <div class="about-stats">
+          <div class="stat" data-target="5">
+            <h3>0+</h3>
+            <p>Years Experience</p>
+          </div>
+          <div class="stat" data-target="100">
+            <h3>0+</h3>
+            <p>Employees</p>
+          </div>
+        </div>
+        <a href="#" class="about-btn">More About Us</a>
+      </div>
+    </div>
+  </section>
+  
+<!-- Sectors Section -->
+<section id="sectors" class="sectors">
+    <div class="container">
+        <!-- Title -->
+        <h2 class="sectors-title">
+            <span style="color: #8BC540;">Our</span> Sectors
+        </h2>
+
+        <!-- Sectors Grid Slider -->
+        <div class="sectors-slider">
+            <div class="sectors-grid">
+                <!-- Sector Card 1 -->
+                <div class="sector-card">
+                    <img src="/data/images/commercial.jpg" alt="Commercial & Office">
+                    <h3>Commercial & Office</h3>
+                </div>
+                <!-- Sector Card 2 -->
+                <div class="sector-card active">
+                    <img src="/data/images/social-care.jpg" alt="Health & Social Care">
+                    <h3>Health & Social Care</h3>
+                </div>
+                <!-- Sector Card 3 -->
+                <div class="sector-card">
+                    <img src="/data/images/industry.jpg" alt="Industrial">
+                    <h3>Industrial</h3>
+                </div>
+                <!-- Sector Card 4 -->
+                <div class="sector-card">
+                    <img src="/data/images/digital.jpg" alt="IT & Digital">
+                    <h3>IT & Digital</h3>
+                </div>
+            </div>
+            
+            <!-- Dots (pagination) -->
+            <div class="dots">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+
+        <!-- View All Sectors Button -->
+        <div class="view-all-btn">
+            <a href="#" class="btn">View All Sectors</a>
+        </div>
+    </div>
+</section>
+
+
+
+<div class="job-vacancies-section">
+    <h2>Job <span>Vacancies</span></h2>
+    <p>Find Permanent, Temporary & Full / Part-time jobs that suit you</p>
+    <a href="#" class="btn-jobs">View All Jobs Vacancies</a>
+  </div>
+  
+
+
+<!-- Our Blogs Section -->
+<section id="blogs" class="blogs-section">
+    <h2>Our <span>Blogs</span></h2>
+    <div class="blogs-slider-wrapper">
+        <div class="blogs-container" id="blogs-slider">
+            <!-- Blog Cards -->
+            <div class="blog-card">
+                <img src="/data/images/blog1.jpg" alt="Blog 1">
+                <h3>Blog Title 1</h3>
+                <p>A brief description of the blog article.</p>
+            </div>
+            <div class="blog-card">
+                <img src="/data/images/blog2.jpg" alt="Blog 2">
+                <h3>Blog Title 2</h3>
+                <p>A brief description of the blog article.</p>
+            </div>
+            <div class="blog-card">
+                <img src="/data/images/blog3.jpg" alt="Blog 3">
+                <h3>Blog Title 3</h3>
+                <p>A brief description of the blog article.</p>
+            </div>
+            <div class="blog-card">
+                <img src="/data/images/blog2.jpg" alt="Blog 4">
+                <h3>Blog Title 4</h3>
+                <p>A brief description of the blog article.</p>
+            </div>
+            <!-- Duplicated blog cards for seamless looping -->
+            <div class="blog-card">
+                <img src="/data/images/blog1.jpg" alt="Blog 1">
+                <h3>Blog Title 1</h3>
+                <p>A brief description of the blog article.</p>
+            </div>
+            <div class="blog-card">
+                <img src="/data/images/blog2.jpg" alt="Blog 2">
+                <h3>Blog Title 2</h3>
+                <p>A brief description of the blog article.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Slideshow Controls -->
+    <div class="slider-controls">
+        <button class="prev-btn">Previous</button>
+        <button class="next-btn">Next</button>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Reviews Section -->
+<section id="reviews" class="reviews-section">
+    <h2>Client <span>Reviews</span></h2>
+    <div class="reviews-slider-wrapper">
+        <div class="reviews-container" id="reviews-slider">
+            <!-- Review Cards -->
+            <div class="review-card">
+                <img src="/data/images/avatar-1.png" alt="Review 1">
+                <h3>Review Title 1</h3>
+                <p>Review content goes here.</p>
+            </div>
+            <div class="review-card">
+                <img src="/data/images/avatar-2.jpg" alt="Review 2">
+                <h3>Review Title 2</h3>
+                <p>Review content goes here.</p>
+            </div>
+            <div class="review-card">
+                <img src="/data/images/avatar-3.png" alt="Review 3">
+                <h3>Review Title 3</h3>
+                <p>Review content goes here.</p>
+            </div>
+            <div class="review-card">
+                <img src="/data/images/avatar-1.png" alt="Review 4">
+                <h3>Review Title 4</h3>
+                <p>Review content goes here.</p>
+            </div>
+            <!-- Duplicated review cards for seamless looping -->
+            <div class="review-card">
+                <img src="/data/images/avatar-1.png" alt="Review 1">
+                <h3>Fullstack Developer</h3>
+                <p>Review content goes here.</p>
+            </div>
+            <div class="review-card">
+                <img src="/data/images/avatar-2.jpg" alt="Review 2">
+                <h3>Review Title 2</h3>
+                <p>Review content goes here.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Slideshow Controls -->
+    
+
+</section>
+
+
+<section class="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <div class="contact-content">
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p>Fill out the form below to send us a message, or contact us via WhatsApp.</p>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 1234 Street Name, City, Country</li>
+                    <li><i class="fas fa-phone-alt"></i> +123 456 7890</li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:admin@example.com">admin@example.com</a></li>
+                </ul>
+                <a href="https://wa.me/1234567890" class="whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Chat with us on WhatsApp
+                </a>
+            </div>
+
+            <!-- Contact Form -->
+<div class="contact-form">
+    <h3>Send Us a Message</h3>
+    <form onsubmit="reset();" id="contact-form" >
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+</div>
+
+        </div>
+    </div>
+</section>
+
+  <!-- Footer Section -->
+  <!-- Footer Section -->
+<footer>
+    <div class="container footer-content">
+        <div class="footer-info" data-aos="fade-up" data-aos-delay="100">
+            <h3>The Krispa</h3>
+            <p>Your future starts here.</p>
+            <p class="agency-description">We are an independent and local recruitment agency, who believe in doing things differently.</p>
+        </div>
+        <div class="footer-links" data-aos="fade-up" data-aos-delay="200">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Vacancies</a></li>
+                <li><a href="#">Immigration</a></li>
+                <li><a href="#">Clients</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact" data-aos="fade-up" data-aos-delay="300">
+            <h4>Contact Info</h4>
+            <p>4th Floor, Victoria House, Victoria Road, Chelmsford, Essex CM1 1JR, UK</p>
+            <p>07305353235 | 07507636530 | 01245707534</p>
+            <p>Email: <a href="mailto:info@the-destiny.co.uk">info@the-destiny.co.uk</a></p>
+        </div>
+        <div class="newsletter" data-aos="fade-up" data-aos-delay="400">
+            <h4>Subscribe to Our Newsletter</h4>
+            <form>
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Subscribe Now</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer-bottom" data-aos="fade-up" data-aos-delay="500">
+        <p>© Copyright 2022 Destiny Recruitment. All rights reserved. Design and Developed by Colourmoon.</p>
+    </div>
+</footer>
+
+<!-- Popup Modal -->
+<div id="popup-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <img id="popup-image" src="" alt="Popup Image">
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.getElementById('nav-links');
+        const popupModal = document.getElementById('popup-modal');
+        const popupImage = document.getElementById('popup-image');
+        const closeBtn = document.querySelector('.close-btn');
+
+        function toggleMenu() {
+            navLinks.classList.toggle('show');
+        }
+
+        function getRandomImage() {
+            const images = [
+                '/data/images/popup1.jpg',
+                '/data/images/popup2.jpg',
+                '/data/images/popup3.jpg',
+                '/data/images/popup4.jpg',
+                '/data/images/popup5.jpg',
+                '/data/images/popup6.jpg',
+                // Add more image paths here
+            ];
+            const randomIndex = Math.floor(Math.random() * images.length);
+            return images[randomIndex];
+        }
+
+        function showPopup() {
+            popupImage.src = getRandomImage();
+            popupModal.style.display = 'flex';
+        }
+
+        function hidePopup() {
+            popupModal.style.display = 'none';
+        }
+
+        menuIcon.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', hidePopup);
+        window.addEventListener('click', function(event) {
+            if (event.target === popupModal) {
+                hidePopup();
+            }
+        });
+
+        // Show popup when the page loads
+        showPopup();
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.getElementById('nav-links');
+    
+        function toggleMenu() {
+            navLinks.classList.toggle('show');
+        }
+    
+        menuIcon.addEventListener('click', toggleMenu);
+    });
+    </script>
+    
+
+
+
+    
+  
+</body>
+</html>
